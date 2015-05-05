@@ -1,0 +1,269 @@
+db.show.insert(
+{
+	title: "Crash Course: Big History: Chapters 1-6: The Big Bang To Human Evolution",
+	startYear: -13800000000,
+	endYear: -60000,
+	country: "world",
+	type: "youtube",
+	src: ""
+});
+
+db.show.insert(
+{
+	title: "Crash Course: Big History: Chapters 7: Migrations and Intensification",
+	startYear: -59000,
+	endYear: 1490,
+	country: "world"
+	type: "youtube",
+	src: ""	
+});
+
+db.show.insert(
+{
+	title: "Crash Course: Big History: Chapters 8: The Modern Revolution",
+	startYear: 1500,
+	endYear: 2015,
+	country: "world",
+	type: "youtube",
+	src: ""	
+});
+
+db.show.insert(
+{
+	title: "Crash Course: Big History: Chapter 9: The Anthropocene",
+	startYear: 1800,
+	endYear: 2100,
+	country: "world",
+	type: "youtube",
+	src: ""	
+});
+
+db.show.insert(
+{
+	title: "Crash Course: Big History: Chapter 10: Deep Future",
+	startYear: 2101,
+	endYear: 1000000000000, 
+	country: "world",
+	type: "youtube",
+	src: ""
+});
+
+db.show.insert(
+{
+	title: "Crusader Kings 2",
+	startYear: 769,
+	endYear: 1453,
+	country: "world",
+	type: "game",
+	src: ""
+});
+
+db.show.insert(
+{
+    title: "Genghis Khan and the Making of the Modern World",
+    startYear: 1162,
+    endYear: 1277,
+    country: "asia",
+    type: "audio",
+    src: ""
+});
+
+db.show.insert(
+{
+    title: "Extra History: South Seas Bubble",
+    startYear: 1710,
+    endYear: 1720,
+    country: "england",
+	type: "youtube",
+	src: "https://www.youtube.com/embed/k1kndKWJKB8"
+});
+
+db.show.insert(
+{
+    title: "Revolutions Podcast: Part 1: The English Civil War : Episode 1",
+    startYear: 1600,
+    endYear: 1628,
+    country: "uk",
+	type: "audio",
+	src: ""
+});
+
+db.show.insert(
+{
+    title: "Revolutions Podcast: Part 1: The English Civil War : Episode 2",
+    startYear: 1628,
+    endYear: 1637,
+    country: "uk",
+	type: "audio",
+	src: ""
+});
+
+db.show.insert(
+{
+    title: "Revolutions Podcast: Part 1: The English Civil War : Episode 3",
+    startYear: 1637,
+    endYear: 1640,
+    country: "uk",
+	type: "audio",
+	src: ""
+});
+
+db.show.insert(
+{
+    title: "Revolutions Podcast: Part 1: The English Civil War : Episode 4",
+    startYear: 1640,
+    endYear: 1642,
+    country: "uk",
+	type: "audio",
+	src: ""
+});
+
+db.show.insert(
+{
+    title: "Revolutions Podcast: Part 1: The English Civil War : Episode 5",
+    startYear: 1642,
+    endYear: 1643,
+    country: "uk",
+	type: "audio",
+	src: ""
+});
+
+db.show.insert(
+{
+    title: "Revolutions Podcast: Part 1: The English Civil War : Episode 6",
+    startYear: 1643,
+    endYear: 1644,
+    country: "uk",
+	type: "audio",
+	src: ""
+});
+
+db.show.insert(
+{
+    title: "Revolutions Podcast: Part 1: The English Civil War : Episode 7",
+    startYear: 1644,
+    endYear: 1645,
+    country: "uk",
+	type: "audio",
+	src: ""
+});
+
+db.show.insert(
+{
+    title: "Revolutions Podcast: Part 1: The English Civil War : Episode 8",
+    startYear: 1645,
+    endYear: 1647,
+    country: "uk",
+	type: "audio",
+	src: ""
+});
+
+db.show.insert(
+{
+    title: "Revolutions Podcast: Part 1: The English Civil War : Episode 9",
+    startYear: 1647,
+    endYear: 1649,
+    country: "uk",
+	type: "audio",
+	src: ""
+});
+
+db.show.insert(
+{
+    title: "Revolutions Podcast: Part 1: The English Civil War : Episode 10",
+    startYear: 1649,
+    endYear: 1650,
+    country: "uk",
+	type: "audio",
+	src: ""
+});
+
+db.show.insert(
+{
+    title: "Revolutions Podcast: Part 1: The English Civil War : Episode 11",
+    startYear: 1650,
+    endYear: 1651,
+    country: "uk",
+	type: "audio",
+	src: ""
+});
+
+db.show.insert(
+{
+    title: "Revolutions Podcast: Part 1: The English Civil War : Episode 12",
+    startYear: 1651,
+    endYear: 1652,
+    country: "uk",
+	type: "audio",
+	src: ""
+});
+
+db.show.insert(
+{
+    title: "Revolutions Podcast: Part 1: The English Civil War : Episode 13",
+    startYear: 1652,
+    endYear: 1655,
+    country: "uk",
+	type: "audio",
+	src: ""
+});
+
+db.show.insert(
+{
+    title: "Revolutions Podcast: Part 1: The English Civil War : Episode 14",
+    startYear: 1655,
+    endYear: 1657,
+    country: "uk",
+	type: "audio",
+	src: ""
+});
+
+db.show.insert(
+{
+    title: "Revolutions Podcast: Part 1: The English Civil War : Episode 15",
+    startYear: 1657,
+    endYear: 1659,
+    country: "uk",
+	type: "audio",
+	src: ""
+});
+
+db.show.insert(
+{
+    title: "Revolutions Podcast: Part 1: The English Civil War : Episode 16",
+    startYear: 1659,
+    endYear: 1660,
+    country: "uk",
+	type: "audio",
+	src: ""
+});
+
+db.show.insert(
+{
+    title: "History of Rome Podcast",
+    startYear: -100,
+    endYear: 500,
+    country: "rome",
+	type: "audio",
+	src: ""
+});
+
+db.show.insert(
+{
+	title: "Revolutions Podcast: Part 2: The American Revolution",
+	startYear: 1750,
+	endYear: 1770,
+	country: "usa",
+	type: "audio",
+	src: ""
+});
+
+db.show.insert(
+{
+	title: "Victoria 2",
+	startYear: 1836,
+	endYear: 1936,
+	country: "world",
+	type: "game",
+	src: ""
+});

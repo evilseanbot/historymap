@@ -1,0 +1,73 @@
+<!-- simple-todos.html -->
+<head>
+  <title>History Map</title>
+</head>
+
+<body>
+    <div class='container'>
+        {{> historyShows}}
+	</div>
+</body>
+
+<template name='historyShows'>
+    <header>
+        <h1>History media</h1>
+    </header>
+	<div class="row">	
+	  <div class="small-2 medium-1 columns">
+	      Millenium
+	  </div>
+	  <div class="small-10 medium-11 columns">
+	    <div id='milleniumSlider' class="range-slider" data-slider data-options="start: -40; end: 60; step: 1">
+	      <span class="range-slider-handle" role="slider" tabindex="0"></span>
+	      <span class="range-slider-active-segment"></span>
+	    </div>
+	  </div>
+	 </div>
+	{{#each timeUnits}}
+		{{> timeSlider}}
+	{{/each}}
+
+    <h2>Year: {{activeYear}}</h2>
+    <ul>
+        {{#each countries}}
+        	{{> country}}
+        {{/each}}
+    </ul>    
+</template>
+
+<template name="timeSlider">
+    <div class="row">	
+	  <div class="small-2 medium-1 columns">
+	      {{name}}
+	  </div>
+	  <div class="small-10 medium-11 columns">
+	    <div id='{{name}}Slider' class="range-slider" data-slider data-options="start: 0; end: 99; step: 1">
+	      <span class="range-slider-handle" role="slider" tabindex="0"></span>
+	      <span class="range-slider-active-segment"></span>
+	    </div>
+	  </div>
+	 </div>
+</template>
+
+<template name="country">
+    <li>
+        <h2>{{this}}</h2>
+        <ul>
+          {{#each shows}}
+	          {{> show}}
+          {{/each}}
+        </ul>
+    </li>
+</template>
+
+<template name="show">
+  <li>{{title}} ({{startYear}}~{{endYear}})</li>
+  {{#if isYoutube}}
+  {{#if src}}
+	<iframe id="ytplayer" type="text/html" width="320" height="195"
+	  src="{{src}}"
+	  frameborder="0"> </iframe>
+  {{/if}}
+  {{/if}}
+</template>
