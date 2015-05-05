@@ -14,9 +14,10 @@ if (Meteor.isClient) {
         },
         timeUnits: function() {
             return [
-                {name: "century"},
-                {name: "decade"},
-                {name: "year"}
+                {title: "millenium", start: "-40", end: "60"},
+                {title: "century", start: "0", end: "99"},
+                {title: "decade", start: "0", end: "99"},
+                {title: "year", start: "0", end: "99"}
             ]
         }  
     });

@@ -1,0 +1,46 @@
+head
+    title History Map
+
+body
+    .container
+        +historyShows
+
+template(name='historyShows')
+    header
+        h1 History media
+
+    each timeUnits
+        +timeSlider
+
+    h2 Year: #{activeYear}
+    ul
+        each countries
+            +country
+
+template(name="timeSlider")
+    .row 
+        .columns.small-2.medium- #{title}
+        .columns.small-10.medium-11
+            .range-slider(id='#{title}Slider' 
+                data-slider 
+                data-options="start: #{start}; end: #{end}; step: 1"
+            )
+                span.range-slider-handle(role="slider" tabindex="0")
+                span.range-slider-active-segment
+
+
+template(name="country")
+    li
+        h2 #{this}
+        ul
+            each shows
+                +show
+
+template(name="show")
+    li #{title} (#{startYear}~#{endYear})
+    if isYoutube
+        if src
+            iframe#ytplayer(type="text/html" width="320" height="195"
+                src="#{src}"
+                frameborder="0"
+            )
