@@ -10,6 +10,106 @@ db.show.insert(
 
 db.show.insert(
 {
+	title: "Crash Course: World History: Chapter 1: The Agricultural Revolution",
+	startYear: -13000,
+	endYear: -7600,
+	country: "world",
+	type: "youtube",
+	src: "https://www.youtube.com/embed/Yocja_N5s1I"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 2: Indus Valley Civilization",
+	startYear: -7570,
+	endYear: -1300,
+	country: "middle east",
+	type: "youtube",
+	src: "https://www.youtube.com/embed/n7ndRwqJYDM"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 3: Mesopotania",
+	startYear: -3000,
+	endYear: -612,
+	country: "middle east",
+	type: "youtube",
+	src: "https://www.youtube.com/embed/sohXPx_XZ6Y"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 4: Ancient Egypt",
+	startYear: -3400,
+	endYear: -332,
+	country: "africa",
+	type: "youtube",
+	src: "https://www.youtube.com/embed/Z3Wvw6BivVI"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 5: Ancient Greece & Persia",
+	startYear: -539,
+	endYear: -404,
+	country: "europe / middle east",
+	type: "youtube",
+	src: "https://www.youtube.com/embed/Q-mkVSasZIM"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 6: Buddha and Ashoka",
+	startYear: -1700,
+	endYear: -185,
+	country: "india",
+	type: "youtube",
+	src: "https://www.youtube.com/embed/8Nn5uqE3C9w"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 7: China",
+	startYear: -1600,
+	endYear: 1911,
+	country: "asia",
+	type: "youtube",
+	src: "https://www.youtube.com/embed/ylWORyToTo4"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 8: Alexander the Great and the Situation... the Great?",
+	startYear: -356,
+	endYear: -324,
+	country: "europe / middle east / africa",
+	type: "youtube",
+	src: "https://www.youtube.com/embed/0LsrkWDCvxg"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 9: The Silk Road",
+	startYear: -200,
+	endYear: 300,
+	country: "europe / middle east / africa / asia",
+	type: "youtube",
+	src: "https://www.youtube.com/embed/vfe-eNq-Qyg"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 10: The Roman Empire. Or Republic. Or.. Which was it?",
+	startYear: -509,
+	endYear: 14,
+	country: "europe / uk / africa",
+	type: "youtube",
+	src: "https://www.youtube.com/embed/oPf27gAup9U"
+});
+
+db.show.insert(
+{
 	title: "Crash Course: Big History: Chapters 7: Migrations and Intensification",
 	startYear: -59000,
 	endYear: 1490,
@@ -35,7 +135,7 @@ db.show.insert(
 	endYear: 2100,
 	country: "world",
 	type: "youtube",
-	src: ""	
+	src: "https://www.youtube.com/embed/3WpaLt_Blr4"	
 });
 
 db.show.insert(
@@ -45,7 +145,7 @@ db.show.insert(
 	endYear: 1000000000000, 
 	country: "world",
 	type: "youtube",
-	src: ""
+	src: "https://www.youtube.com/embed/kq1HUTLtNW4"
 });
 
 db.show.insert(
@@ -241,18 +341,38 @@ db.show.insert(
 db.show.insert(
 {
     title: "History of Rome Podcast",
-    startYear: -100,
+    startYear: -1194,
     endYear: 500,
-    country: "rome",
+    country: "europe",
 	type: "audio",
 	src: ""
 });
 
 db.show.insert(
 {
+    title: "History of Rome Podcast: Episode 1: In The Beginning",
+    startYear: -1194,
+    endYear: -758,
+    country: "europe",
+	type: "audio",
+	src: "http://ec.libsyn.com/p/a/5/6/a56a440cceb6bb7a/01-_In_the_Beginning.mp3?d13a76d516d9dec20c3d276ce028ed5089ab1ce3dae902ea1d06cb873ed1c95b6933&c_id=3218048"
+});
+
+db.show.insert(
+{
+    title: "History of Rome Podcast: Episode 2: Youthful Indescretions",
+    startYear: -759,
+    endYear: -717,
+    country: "europe",
+	type: "audio",
+	src: "http://ec.libsyn.com/p/f/5/0/f5036a46875df1f2/02-_Youthful_Indiscretions.mp3?d13a76d516d9dec20c3d276ce028ed5089ab1ce3dae902ea1d06cb873ed1c85cb0bb&c_id=1449463"
+});
+
+db.show.insert(
+{
 	title: "Revolutions Podcast: Part 2: The American Revolution",
 	startYear: 1750,
-	endYear: 1770,
+	endYear: 1790,
 	country: "usa",
 	type: "audio",
 	src: ""

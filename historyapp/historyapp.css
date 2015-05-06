@@ -50,20 +50,6 @@ form {
   position: relative;
 }
 
-.new-task input {
-  box-sizing: border-box;
-  padding: 10px 0;
-  background: transparent;
-  border: none;
-  width: 100%;
-  padding-right: 80px;
-  font-size: 1em;
-}
-
-.new-task input:focus{
-  outline: 0;
-}
-
 ul {
   margin: 0;
   padding: 0;
@@ -82,12 +68,11 @@ ul {
 li {
   position: relative;
   list-style: none;
-  padding: 15px;
-  border-bottom: #eee solid 1px;
+  padding: 0px;
 }
 
 li .text {
-  margin-left: 10px;
+  margin-left: 0px;
 }
 
 li.checked {
@@ -111,17 +96,19 @@ header .hide-completed {
   margin-left: 5px;
 }
 
-@media (max-width: 600px) {
-  li {
-    padding: 12px 15px;
-  }
+.activeDate {
+    color: #ff8800;
+}
 
-  .search {
-    width: 150px;
-    clear: both;
-  }
+.date {
+    padding: 0px;
+    margin: 0px;
+    font-size: 16pt;
+}
 
-  .new-task input {
-    padding-bottom: 5px;
-  }
+.slider-label {
+    padding-left: 2px;
+    color: black;
+    bottom: 20px;
+    position: relative;
 }

@@ -12,20 +12,33 @@ template(name='historyShows')
     each timeUnits
         +timeSlider
 
-    h2 Year: #{activeYear}
-    ul
-        each countries
-            +country
+    .row
+        h2 Year: #{activeYear}
+        ul
+            each countries
+                +country
 
 template(name="timeSlider")
     .row 
-        .columns.small-2.medium- #{title}
-        .columns.small-10.medium-11
+        div #{title}
+            if isCentury
+                span.date.activeDate {{century}}
+                span.date {{year}}
+            else
+                span.date {{century}}
+                span.date.activeDate {{year}}
+    .row
+        .columns.small-12.medium-12
             .range-slider(id='#{title}Slider' 
                 data-slider 
                 data-options="start: #{start}; end: #{end}; step: 1"
             )
-                span.range-slider-handle(role="slider" tabindex="0")
+                span.range-slider-handle(role="slider" tabindex="0") 
+                    span.slider-label
+                        if isCentury
+                            {{century}}
+                        else
+                            {{year}}
                 span.range-slider-active-segment
 
 
@@ -40,7 +53,12 @@ template(name="show")
     li #{title} (#{startYear}~#{endYear})
     if isYoutube
         if src
-            iframe#ytplayer(type="text/html" width="320" height="195"
-                src="#{src}"
-                frameborder="0"
-            )
+            ul.accordion(data-accordion)
+                li.accordion-navigation
+                    a(href="#t{{_id._str}}") Watch
+                    .content(id="t{{_id._str}}")
+                        iframe#ytplayer(type="text/html" width="640" height="390"
+                            src="#{src}"
+                            frameborder="0"
+                        )
+

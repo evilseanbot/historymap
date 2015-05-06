@@ -14,12 +14,22 @@ if (Meteor.isClient) {
         },
         timeUnits: function() {
             return [
-                {title: "millenium", start: "-40", end: "60"},
-                {title: "century", start: "0", end: "99"},
-                {title: "decade", start: "0", end: "99"},
+                {title: "century", start: "-40", end: "59"},
                 {title: "year", start: "0", end: "99"}
             ]
         }  
+    });
+
+    Template.timeSlider.helpers({
+        century: function() {
+            return Session.get("century");
+        },
+        year: function() {
+            return Session.get("year");
+        },
+        isCentury: function() {
+            return this.title == 'century';
+        }
     });
 
     Template.country.helpers({
@@ -36,21 +46,28 @@ if (Meteor.isClient) {
 
     Template.show.helpers({
         isYoutube: function() {
-            console.log(this.type);
-            console.log(this.type == 'youtube');
             return (this.type == 'youtube');
+        },
+        expanded: function() {
+            return Session.get("expanded")[this.title];
+        },
+        trimmedId: function() {
+          return this._id.substring(this._id.lastIndexOf("(")+1,this._id.lastIndexOf(")"));
         }
     });
 
+  Template.show.rendered = function(){
+      $(document).foundation();
+      $(document).foundation('#####', 'reflow');      
+  };
 
     Template.historyShows.events({
       "change.fndtn.slider":function(event, template) {
-          //years = [-13800000000, -59000, -500, -100, 1500, 1620, 1710, 1750, 1800, 2101]
-          activeMillenium = parseInt($('#milleniumSlider').attr('data-slider'));          
-          activeCentury = parseInt($('#centurySlider').attr('data-slider'));
-          activeDecade = parseInt($('#decadeSlider').attr('data-slider'));
+          sliderCentury = parseInt($('#centurySlider').attr('data-slider'));
           sliderYear = parseInt($('#yearSlider').attr('data-slider'));
-          activeYear = parseInt((activeMillenium*100) + (activeCentury*10) + (activeDecade*1) + (sliderYear*0.1));
+          activeYear = parseInt((sliderCentury*100) + (sliderYear*1));
+          Session.set("year", sliderYear);
+          Session.set("century", sliderCentury);
           Session.set("activeYear", activeYear);      
       }
    });
