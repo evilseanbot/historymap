@@ -8,6 +8,14 @@ body
 template(name='historyShows')
     header
         h1 History media
+    .row
+        .columns.small-6.medium-6
+            ul.accordion(data-accordion)
+                li.accordion-navigation
+                    a(href="#map") Specific Region
+                    .content(id="map")        
+                        .map-container {{> svgmap}}
+
 
     each timeUnits
         +timeSlider
@@ -15,8 +23,8 @@ template(name='historyShows')
     .row
         h2 Year: #{activeYear}
         ul
-            each countries
-                +country
+            each shows
+                +show
 
 template(name="timeSlider")
     .row 
@@ -35,22 +43,19 @@ template(name="timeSlider")
             )
                 span.range-slider-handle(role="slider" tabindex="0") 
                     span.slider-label
-                        if isCentury
+                        if isCentury 
                             {{century}}
-                        else
+                        else 
                             {{year}}
                 span.range-slider-active-segment
 
-
-template(name="country")
-    li
-        h2 #{this}
-        ul
-            each shows
-                +show
-
 template(name="show")
-    li #{title} (#{startYear}~#{endYear})
+    li #{title}
+        div
+            span.subtext (#{startYear}~#{endYear})
+            each regions
+                span.subtext #{this}
+            
     if isYoutube
         if src
             ul.accordion(data-accordion)
@@ -61,4 +66,5 @@ template(name="show")
                             src="#{src}"
                             frameborder="0"
                         )
-
+    hr
+   

@@ -1,0 +1,9 @@
+regions:
+world: 
+america
+asia
+middle east
+africa
+india
+europe
+uk

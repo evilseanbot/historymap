@@ -2,13 +2,6 @@ Shows = new Mongo.Collection("show");
 
 if (Meteor.isClient) {
     Template.historyShows.helpers({
-        countries: function() {
-            var activeYear = parseInt(Session.get("activeYear"));
-            showsInYear = Shows.find({startYear: {$lte: activeYear}, endYear: {$gte: activeYear} }).fetch();
-            countries = _.uniq(_.pluck(showsInYear, 'country'));
-            countries.sort();
-            return countries;
-        },
         activeYear: function() {
             return Session.get("activeYear");
         },
@@ -17,32 +10,32 @@ if (Meteor.isClient) {
                 {title: "century", start: "-40", end: "59"},
                 {title: "year", start: "0", end: "99"}
             ]
-        }  
+        }, 
+        shows: function() {
+            var activeYear = parseInt(Session.get("activeYear"));
+            shows = Shows.find({
+              startYear: {$lte: activeYear}, 
+              endYear: {$gte: activeYear}
+            });
+            return shows;
+        }
     });
 
     Template.timeSlider.helpers({
         century: function() {
-            return Session.get("century");
+            return parseInt(Session.get("activeYear")/100);
         },
         year: function() {
-            return Session.get("year");
+            var year = Math.abs(Session.get("activeYear") % 100);
+            if (year < 10)
+                year = "0" + String(year);
+
+            return year;
         },
         isCentury: function() {
             return this.title == 'century';
         }
     });
-
-    Template.country.helpers({
-        shows: function() {
-            var activeYear = parseInt(Session.get("activeYear"));
-            shows = Shows.find({
-              startYear: {$lte: activeYear}, 
-              endYear: {$gte: activeYear},
-              country: this.valueOf() 
-            });
-            return shows;
-        }
-    });    
 
     Template.show.helpers({
         isYoutube: function() {

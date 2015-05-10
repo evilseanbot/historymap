@@ -3,7 +3,7 @@ db.show.insert(
 	title: "Crash Course: Big History: Chapters 1-6: The Big Bang To Human Evolution",
 	startYear: -13800000000,
 	endYear: -60000,
-	country: "world",
+	regions:  ["world"]
 	type: "youtube",
 	src: ""
 });
@@ -13,7 +13,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 1: The Agricultural Revolution",
 	startYear: -13000,
 	endYear: -7600,
-	country: "world",
+	regions:  ["world"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/Yocja_N5s1I"
 });
@@ -23,7 +23,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 2: Indus Valley Civilization",
 	startYear: -7570,
 	endYear: -1300,
-	country: "middle east",
+	regions:  ["middle east"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/n7ndRwqJYDM"
 });
@@ -33,7 +33,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 3: Mesopotania",
 	startYear: -3000,
 	endYear: -612,
-	country: "middle east",
+	regions:  ["middle east"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/sohXPx_XZ6Y"
 });
@@ -43,7 +43,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 4: Ancient Egypt",
 	startYear: -3400,
 	endYear: -332,
-	country: "africa",
+	regions:  ["africa"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/Z3Wvw6BivVI"
 });
@@ -53,7 +53,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 5: Ancient Greece & Persia",
 	startYear: -539,
 	endYear: -404,
-	country: "europe / middle east",
+	regions:  ["europe", "middle east"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/Q-mkVSasZIM"
 });
@@ -63,7 +63,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 6: Buddha and Ashoka",
 	startYear: -1700,
 	endYear: -185,
-	country: "india",
+	regions:  ["india"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/8Nn5uqE3C9w"
 });
@@ -73,7 +73,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 7: China",
 	startYear: -1600,
 	endYear: 1911,
-	country: "asia",
+	regions:  ["asia"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/ylWORyToTo4"
 });
@@ -83,7 +83,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 8: Alexander the Great and the Situation... the Great?",
 	startYear: -356,
 	endYear: -324,
-	country: "europe / middle east / africa",
+	regions:  ["europe", "middle east", "africa"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/0LsrkWDCvxg"
 });
@@ -93,7 +93,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 9: The Silk Road",
 	startYear: -200,
 	endYear: 300,
-	country: "europe / middle east / africa / asia",
+	regions:  ["europe", "middle east", "africa" "asia"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/vfe-eNq-Qyg"
 });
@@ -103,17 +103,167 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 10: The Roman Empire. Or Republic. Or.. Which was it?",
 	startYear: -509,
 	endYear: 14,
-	country: "europe / uk / africa",
+	regions:  ["europe", "uk", "africa"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/oPf27gAup9U"
 });
 
 db.show.insert(
 {
+	title: "Crash Course: World History: Chapter 11: Christianity from Judaism to Constantantine",
+	startYear: -3000,
+	endYear: 337,
+	regions:  ["europe", "africa"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/TG55ErfdaeY"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 12: Fall of the Roman Empire... in the 15th Century",
+	startYear: 200,
+	endYear: 1500, 
+	regions:  ["europe", "middle east"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/kq1HUTLtNW4"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 13: Islam, the Quaran, and the Five Pillars All Without A Flamewar",
+	startYear: 600,
+	endYear: 700, 
+	regions: ["middle east"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/TpcbfxtdoI8"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 14: The Dark Ages... How Dark Were They Really?",
+	startYear: 600,
+	endYear: 1450, 
+	regions: ["europe / middle east / asia"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/QV7CanyzhZg"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 15: The Crusades - Pilgrimage or Holy War?",
+	startYear: 1095,
+	endYear: 1204, 
+	regions: ["europe / middle east"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/X0zudTQelzI"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 16: Mansa Musa and Islam in Africa",
+	startYear: 700,
+	endYear: 1500, 
+	regions: ["europe / africa"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/jvnU0v6hcUo"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 17: Wait For It... The Mongols!",
+	startYear: 1162,
+	endYear: 1242, 
+	regions: ["asia / middle east"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 18: Intl Commerce, Snorkeling Camels, and the Indian Ocean Trade",
+	startYear: 700,
+	endYear: 1400, 
+	regions: ["asia / middle east / africa"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/a6XtBLDmPA0"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 19: Venice and the Ottoman Empire",
+	startYear: 1204,
+	endYear: 1919, 
+	regions: ["europe / middle east"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/UN-II_jBzzo"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 20: Russia, the Kievan Rus, and the Mongols",
+	startYear: 800,
+	endYear: 1584, 
+	regions: ["east europe"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/etmRI2_9Q_A"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 21: Columbus, de Gama, and Zheng He!",
+	startYear: 1405,
+	endYear: 1498, 
+	regions: ["asia / europe / america"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/NjEGncridoQ"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 22: The Renaissance: Was it a Thing?",
+	startYear: 1300,
+	endYear: 1600, 
+	regions: ["europe / middle east"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/Vufba_ZcoR0"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 23: The Columbian Exchange",
+	startYear: 1400,
+	endYear: 1600, 
+	regions: ["europe / america"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/HQPA5oNpfM4"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 24: The Atlantic Slave Trade",
+	startYear: 1400,
+	endYear: 1800, 
+	regions: ["africa / europe / america"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/dnV_MTFEGIY"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 25: The Spanish Empire, Silver, & Runaway Inflation",
+	startYear: 1430,
+	endYear: 1800, 
+	regions: ["america / spain"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/dnV_MTFEGIY"
+});
+
+db.show.insert(
+{
 	title: "Crash Course: Big History: Chapters 7: Migrations and Intensification",
-	startYear: -59000,
+	startYear: -159000,
 	endYear: 1490,
-	country: "world"
+	regions: ["world"
 	type: "youtube",
 	src: ""	
 });
@@ -123,7 +273,7 @@ db.show.insert(
 	title: "Crash Course: Big History: Chapters 8: The Modern Revolution",
 	startYear: 1500,
 	endYear: 2015,
-	country: "world",
+	regions: ["world"],
 	type: "youtube",
 	src: ""	
 });
@@ -133,7 +283,7 @@ db.show.insert(
 	title: "Crash Course: Big History: Chapter 9: The Anthropocene",
 	startYear: 1800,
 	endYear: 2100,
-	country: "world",
+	regions: ["world"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/3WpaLt_Blr4"	
 });
@@ -143,7 +293,7 @@ db.show.insert(
 	title: "Crash Course: Big History: Chapter 10: Deep Future",
 	startYear: 2101,
 	endYear: 1000000000000, 
-	country: "world",
+	regions: ["world"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/kq1HUTLtNW4"
 });
@@ -153,7 +303,7 @@ db.show.insert(
 	title: "Crusader Kings 2",
 	startYear: 769,
 	endYear: 1453,
-	country: "world",
+	regions: ["world"],
 	type: "game",
 	src: ""
 });
@@ -163,7 +313,7 @@ db.show.insert(
     title: "Genghis Khan and the Making of the Modern World",
     startYear: 1162,
     endYear: 1277,
-    country: "asia",
+    regions: ["asia",
     type: "audio",
     src: ""
 });
@@ -173,7 +323,7 @@ db.show.insert(
     title: "Extra History: South Seas Bubble",
     startYear: 1710,
     endYear: 1720,
-    country: "england",
+    regions: ["england"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/k1kndKWJKB8"
 });
@@ -183,7 +333,7 @@ db.show.insert(
     title: "Revolutions Podcast: Part 1: The English Civil War : Episode 1",
     startYear: 1600,
     endYear: 1628,
-    country: "uk",
+    regions: ["uk"],
 	type: "audio",
 	src: ""
 });
@@ -193,7 +343,7 @@ db.show.insert(
     title: "Revolutions Podcast: Part 1: The English Civil War : Episode 2",
     startYear: 1628,
     endYear: 1637,
-    country: "uk",
+    regions: ["uk"],
 	type: "audio",
 	src: ""
 });
@@ -203,7 +353,7 @@ db.show.insert(
     title: "Revolutions Podcast: Part 1: The English Civil War : Episode 3",
     startYear: 1637,
     endYear: 1640,
-    country: "uk",
+    regions: ["uk"],
 	type: "audio",
 	src: ""
 });
@@ -213,7 +363,7 @@ db.show.insert(
     title: "Revolutions Podcast: Part 1: The English Civil War : Episode 4",
     startYear: 1640,
     endYear: 1642,
-    country: "uk",
+    regions: ["uk"],
 	type: "audio",
 	src: ""
 });
@@ -223,7 +373,7 @@ db.show.insert(
     title: "Revolutions Podcast: Part 1: The English Civil War : Episode 5",
     startYear: 1642,
     endYear: 1643,
-    country: "uk",
+    regions: ["uk"],
 	type: "audio",
 	src: ""
 });
@@ -233,7 +383,7 @@ db.show.insert(
     title: "Revolutions Podcast: Part 1: The English Civil War : Episode 6",
     startYear: 1643,
     endYear: 1644,
-    country: "uk",
+    regions: ["uk"],
 	type: "audio",
 	src: ""
 });
@@ -243,7 +393,7 @@ db.show.insert(
     title: "Revolutions Podcast: Part 1: The English Civil War : Episode 7",
     startYear: 1644,
     endYear: 1645,
-    country: "uk",
+    regions: ["uk"],
 	type: "audio",
 	src: ""
 });
@@ -253,7 +403,7 @@ db.show.insert(
     title: "Revolutions Podcast: Part 1: The English Civil War : Episode 8",
     startYear: 1645,
     endYear: 1647,
-    country: "uk",
+    regions: ["uk"],
 	type: "audio",
 	src: ""
 });
@@ -263,7 +413,7 @@ db.show.insert(
     title: "Revolutions Podcast: Part 1: The English Civil War : Episode 9",
     startYear: 1647,
     endYear: 1649,
-    country: "uk",
+    regions: ["uk"],
 	type: "audio",
 	src: ""
 });
@@ -273,7 +423,7 @@ db.show.insert(
     title: "Revolutions Podcast: Part 1: The English Civil War : Episode 10",
     startYear: 1649,
     endYear: 1650,
-    country: "uk",
+    regions: ["uk"],
 	type: "audio",
 	src: ""
 });
@@ -283,7 +433,7 @@ db.show.insert(
     title: "Revolutions Podcast: Part 1: The English Civil War : Episode 11",
     startYear: 1650,
     endYear: 1651,
-    country: "uk",
+    regions: ["uk"],
 	type: "audio",
 	src: ""
 });
@@ -293,7 +443,7 @@ db.show.insert(
     title: "Revolutions Podcast: Part 1: The English Civil War : Episode 12",
     startYear: 1651,
     endYear: 1652,
-    country: "uk",
+    regions: ["uk"],
 	type: "audio",
 	src: ""
 });
@@ -303,7 +453,7 @@ db.show.insert(
     title: "Revolutions Podcast: Part 1: The English Civil War : Episode 13",
     startYear: 1652,
     endYear: 1655,
-    country: "uk",
+    regions: ["uk"],
 	type: "audio",
 	src: ""
 });
@@ -313,7 +463,7 @@ db.show.insert(
     title: "Revolutions Podcast: Part 1: The English Civil War : Episode 14",
     startYear: 1655,
     endYear: 1657,
-    country: "uk",
+    regions: ["uk"],
 	type: "audio",
 	src: ""
 });
@@ -323,7 +473,7 @@ db.show.insert(
     title: "Revolutions Podcast: Part 1: The English Civil War : Episode 15",
     startYear: 1657,
     endYear: 1659,
-    country: "uk",
+    regions: ["uk"],
 	type: "audio",
 	src: ""
 });
@@ -333,7 +483,7 @@ db.show.insert(
     title: "Revolutions Podcast: Part 1: The English Civil War : Episode 16",
     startYear: 1659,
     endYear: 1660,
-    country: "uk",
+    regions: ["uk"],
 	type: "audio",
 	src: ""
 });
@@ -343,7 +493,7 @@ db.show.insert(
     title: "History of Rome Podcast",
     startYear: -1194,
     endYear: 500,
-    country: "europe",
+    regions: ["europe"],
 	type: "audio",
 	src: ""
 });
@@ -353,7 +503,7 @@ db.show.insert(
     title: "History of Rome Podcast: Episode 1: In The Beginning",
     startYear: -1194,
     endYear: -758,
-    country: "europe",
+    regions: ["europe"],
 	type: "audio",
 	src: "http://ec.libsyn.com/p/a/5/6/a56a440cceb6bb7a/01-_In_the_Beginning.mp3?d13a76d516d9dec20c3d276ce028ed5089ab1ce3dae902ea1d06cb873ed1c95b6933&c_id=3218048"
 });
@@ -363,7 +513,7 @@ db.show.insert(
     title: "History of Rome Podcast: Episode 2: Youthful Indescretions",
     startYear: -759,
     endYear: -717,
-    country: "europe",
+    regions: ["europe"],
 	type: "audio",
 	src: "http://ec.libsyn.com/p/f/5/0/f5036a46875df1f2/02-_Youthful_Indiscretions.mp3?d13a76d516d9dec20c3d276ce028ed5089ab1ce3dae902ea1d06cb873ed1c85cb0bb&c_id=1449463"
 });
@@ -373,7 +523,7 @@ db.show.insert(
 	title: "Revolutions Podcast: Part 2: The American Revolution",
 	startYear: 1750,
 	endYear: 1790,
-	country: "usa",
+	regions: ["usa"],
 	type: "audio",
 	src: ""
 });
@@ -383,7 +533,7 @@ db.show.insert(
 	title: "Victoria 2",
 	startYear: 1836,
 	endYear: 1936,
-	country: "world",
+	regions: ["world"],
 	type: "game",
 	src: ""
 });
