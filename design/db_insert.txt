@@ -143,7 +143,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 14: The Dark Ages... How Dark Were They Really?",
 	startYear: 600,
 	endYear: 1450, 
-	regions: ["europe / middle east / asia"],
+	regions: ["europe", "middle east", "asia"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/QV7CanyzhZg"
 });
@@ -153,7 +153,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 15: The Crusades - Pilgrimage or Holy War?",
 	startYear: 1095,
 	endYear: 1204, 
-	regions: ["europe / middle east"],
+	regions: ["europe", "middle east"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/X0zudTQelzI"
 });
@@ -163,7 +163,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 16: Mansa Musa and Islam in Africa",
 	startYear: 700,
 	endYear: 1500, 
-	regions: ["europe / africa"],
+	regions: ["europe", "africa"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/jvnU0v6hcUo"
 });
@@ -173,7 +173,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 17: Wait For It... The Mongols!",
 	startYear: 1162,
 	endYear: 1242, 
-	regions: ["asia / middle east"],
+	regions: ["asia", "middle east"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/"
 });
@@ -183,7 +183,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 18: Intl Commerce, Snorkeling Camels, and the Indian Ocean Trade",
 	startYear: 700,
 	endYear: 1400, 
-	regions: ["asia / middle east / africa"],
+	regions: ["asia", "middle east", "africa"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/a6XtBLDmPA0"
 });
@@ -193,7 +193,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 19: Venice and the Ottoman Empire",
 	startYear: 1204,
 	endYear: 1919, 
-	regions: ["europe / middle east"],
+	regions: ["europe", "middle east"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/UN-II_jBzzo"
 });
@@ -203,7 +203,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 20: Russia, the Kievan Rus, and the Mongols",
 	startYear: 800,
 	endYear: 1584, 
-	regions: ["east europe"],
+	regions: ["europe"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/etmRI2_9Q_A"
 });
@@ -213,7 +213,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 21: Columbus, de Gama, and Zheng He!",
 	startYear: 1405,
 	endYear: 1498, 
-	regions: ["asia / europe / america"],
+	regions: ["asia", "europe", "america"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/NjEGncridoQ"
 });
@@ -223,7 +223,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 22: The Renaissance: Was it a Thing?",
 	startYear: 1300,
 	endYear: 1600, 
-	regions: ["europe / middle east"],
+	regions: ["europe", "middle east"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/Vufba_ZcoR0"
 });
@@ -233,7 +233,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 23: The Columbian Exchange",
 	startYear: 1400,
 	endYear: 1600, 
-	regions: ["europe / america"],
+	regions: ["europe", "america"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/HQPA5oNpfM4"
 });
@@ -243,7 +243,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 24: The Atlantic Slave Trade",
 	startYear: 1400,
 	endYear: 1800, 
-	regions: ["africa / europe / america"],
+	regions: ["africa", "europe", "america"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/dnV_MTFEGIY"
 });
@@ -253,7 +253,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 25: The Spanish Empire, Silver, & Runaway Inflation",
 	startYear: 1430,
 	endYear: 1800, 
-	regions: ["america / spain"],
+	regions: ["america", "europe"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/dnV_MTFEGIY"
 });
@@ -263,7 +263,7 @@ db.show.insert(
 	title: "Crash Course: Big History: Chapters 7: Migrations and Intensification",
 	startYear: -159000,
 	endYear: 1490,
-	regions: ["world"
+	regions: ["world"],
 	type: "youtube",
 	src: ""	
 });
@@ -303,7 +303,7 @@ db.show.insert(
 	title: "Crusader Kings 2",
 	startYear: 769,
 	endYear: 1453,
-	regions: ["world"],
+	regions: ["europe", "middle east", "uk", "india"],
 	type: "game",
 	src: ""
 });
@@ -313,7 +313,7 @@ db.show.insert(
     title: "Genghis Khan and the Making of the Modern World",
     startYear: 1162,
     endYear: 1277,
-    regions: ["asia",
+    regions: ["asia"],
     type: "audio",
     src: ""
 });
@@ -323,7 +323,7 @@ db.show.insert(
     title: "Extra History: South Seas Bubble",
     startYear: 1710,
     endYear: 1720,
-    regions: ["england"],
+    regions: ["uk"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/k1kndKWJKB8"
 });
@@ -523,7 +523,7 @@ db.show.insert(
 	title: "Revolutions Podcast: Part 2: The American Revolution",
 	startYear: 1750,
 	endYear: 1790,
-	regions: ["usa"],
+	regions: ["america"],
 	type: "audio",
 	src: ""
 });

@@ -1,6 +1,10 @@
 Shows = new Mongo.Collection("show");
 
 if (Meteor.isClient) {
+
+    Session.set("expandedElements", {});
+    Session.set("activeRegion", "world");
+
     Template.historyShows.helpers({
         activeYear: function() {
             return Session.get("activeYear");
@@ -13,11 +17,24 @@ if (Meteor.isClient) {
         }, 
         shows: function() {
             var activeYear = parseInt(Session.get("activeYear"));
-            shows = Shows.find({
-              startYear: {$lte: activeYear}, 
-              endYear: {$gte: activeYear}
-            });
+            var activeRegion = Session.get("activeRegion");
+            if (activeRegion == "world") {
+              var shows = Shows.find({
+                startYear: {$lte: activeYear}, 
+                endYear: {$gte: activeYear}
+              });
+            }
+            else {
+              var shows = Shows.find({
+                startYear: {$lte: activeYear}, 
+                endYear: {$gte: activeYear},
+                regions: {$in: [activeRegion, 'world']}
+              });
+            }
             return shows;
+        },
+        activeRegion: function() {
+          return Session.get("activeRegion");
         }
     });
 
@@ -42,17 +59,21 @@ if (Meteor.isClient) {
             return (this.type == 'youtube');
         },
         expanded: function() {
-            return Session.get("expanded")[this.title];
-        },
-        trimmedId: function() {
-          return this._id.substring(this._id.lastIndexOf("(")+1,this._id.lastIndexOf(")"));
+          var expandedElements = Session.get("expandedElements");
+          if ( _.has(expandedElements, "e" + this._id._str) )
+              return true;
+          else
+              return false;
         }
     });
 
-  Template.show.rendered = function(){
-      $(document).foundation();
-      $(document).foundation('#####', 'reflow');      
-  };
+    Template.show.events({
+        "click .expand": function(event, template) {
+            var expandedElements = Session.get("expandedElements");
+            expandedElements["e" + this._id._str] = true;
+            Session.set("expandedElements", expandedElements);          
+        }
+    });
 
     Template.historyShows.events({
       "change.fndtn.slider":function(event, template) {
@@ -62,6 +83,26 @@ if (Meteor.isClient) {
           Session.set("year", sliderYear);
           Session.set("century", sliderCentury);
           Session.set("activeYear", activeYear);      
+      },
+      "click .map-menu": function() {
+          Session.set("activeRegion", 'world');
       }
    });
+
+    Template.svgmap.events({
+      "click":function(event, template) {
+        console.log(event.target.attributes.id.value);
+        console.log(event.target.parentElement.attributes.id.value);
+        var region = event.target.parentElement.attributes.id.value;
+
+        if (region == "india_region")
+            region = "india";
+        if (region == "middle_east")
+            region = "middle east";
+        if (region == "svg2")
+            region = "world";
+
+        Session.set("activeRegion", region);
+      }
+   });    
 }
