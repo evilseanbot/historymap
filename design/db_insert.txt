@@ -113,7 +113,7 @@ db.show.insert(
 	title: "Crash Course: World History: Chapter 11: Christianity from Judaism to Constantantine",
 	startYear: -3000,
 	endYear: 337,
-	regions:  ["europe", "africa"],
+	regions:  ["europe", "africa", "middle east"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/TG55ErfdaeY"
 });
@@ -256,6 +256,65 @@ db.show.insert(
 	regions: ["america", "europe"],
 	type: "youtube",
 	src: "https://www.youtube.com/embed/dnV_MTFEGIY"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 26: The Seven Years War",
+	startYear: 1756,
+	endYear: 1763, 
+	regions: ["europe", "america", "india", "africa"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/j0qbzNHmfW0"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 27: The Amazing Life and Strange Death of Captain Cook",
+	startYear: 1764,
+	endYear: 1779, 
+	regions: ["europe", "america", "australia"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/2yXNrLTddME"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 28: Tea, Taxes, and The American Revolution",
+	startYear: 1763,
+	endYear: 1783, 
+	regions: ["america", "uk"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/HlUiSBXQHCw"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 29: The French Revolution",
+	startYear: 1789,
+	endYear: 1799, 
+	regions: ["europe"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/lTTvKwCylFY"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 30: Haitian Revolutions",
+	startYear: 1700,
+	endYear: 1804, 
+	regions: ["america"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/5A_o-nU5s2U"
+});
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 39: USA vs USSR Fight! The Cold War",
+	startYear: 1945,
+	endYear: 1990, 
+	regions: ["america", "europe", "asia", "middle east"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/y9HjvHZfCUI"
 });
 
 db.show.insert(
