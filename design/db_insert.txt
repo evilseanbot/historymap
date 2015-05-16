@@ -307,6 +307,87 @@ db.show.insert(
 	type: "youtube",
 	src: "https://www.youtube.com/embed/5A_o-nU5s2U"
 });
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 31: Latin America Revolutions",
+	startYear: 1600,
+	endYear: 1824, 
+	regions: ["america"],
+	type: "youtube",
+	src: ""
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 32: Coal, Steam and The Industrial Revolution",
+	startYear: 1750,
+	endYear: 1850, 
+	regions: ["uk", "europe", "asia", "india"],
+	type: "youtube",
+	src: ""
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 33: Capitalism and Socialism",
+	startYear: 1800,
+	endYear: 1894, 
+	regions: ["uk", "europe"],
+	type: "youtube",
+	src: ""
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 34: Samurai, Daimyo, Matthew Perry and Nationalism",
+	startYear: 1500,
+	endYear: 1882, 
+	regions: ["asia"],
+	type: "youtube",
+	src: ""
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 35: Imperialism",
+	startYear: 1793,
+	endYear: 1910, 
+	regions: ["asia", "europe", "uk", "africa"],
+	type: "youtube",
+	src: ""
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 36: Archdukes, Cynicism, and World War I",
+	startYear: 1914,
+	endYear: 1918, 
+	regions: ["europe", "uk", "africa", "middle_east", "america"],
+	type: "youtube",
+	src: ""
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 37: Communists, Nationalists, and China's Revolutions",
+	startYear: 1899,
+	endYear: 1966, 
+	regions: ["asia"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/UUCEeC4f6ts"
+});
+
+db.show.insert(
+{
+	title: "Crash Course: World History: Chapter 38: World War II",
+	startYear: 1929,
+	endYear: 1945, 
+	regions: ["world"],
+	type: "youtube",
+	src: "https://www.youtube.com/embed/Q78COTwT7nE"
+});
+
 db.show.insert(
 {
 	title: "Crash Course: World History: Chapter 39: USA vs USSR Fight! The Cold War",

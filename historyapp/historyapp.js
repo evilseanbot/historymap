@@ -18,23 +18,27 @@ if (Meteor.isClient) {
         shows: function() {
             var activeYear = parseInt(Session.get("activeYear"));
             var activeRegion = Session.get("activeRegion");
+            
             if (activeRegion == "world") {
-              var shows = Shows.find({
-                startYear: {$lte: activeYear}, 
-                endYear: {$gte: activeYear}
-              });
+
+                var shows = Shows.find({
+                    startYear: {$lte: activeYear}, 
+                    endYear: {$gte: activeYear}
+                }).fetch();
             }
             else {
-              var shows = Shows.find({
-                startYear: {$lte: activeYear}, 
-                endYear: {$gte: activeYear},
-                regions: {$in: [activeRegion, 'world']}
-              });
+                var shows = Shows.find({
+                    startYear: {$lte: activeYear}, 
+                    endYear: {$gte: activeYear},
+                    regions: {$in: [activeRegion, 'world']}
+                }).fetch();
             }
-            return shows;
+
+            var sortedShows = _.sortBy(shows, function(show){return show.endYear - show.startYear});
+            return sortedShows;
         },
         activeRegion: function() {
-          return Session.get("activeRegion");
+            return Session.get("activeRegion");
         }
     });
 
@@ -54,7 +58,7 @@ if (Meteor.isClient) {
         }
     });
 
-    Template.show.helpers({
+    Template.youtube.helpers({
         isYoutube: function() {
             return (this.type == 'youtube');
         },
@@ -67,7 +71,7 @@ if (Meteor.isClient) {
         }
     });
 
-    Template.show.events({
+    Template.youtube.events({
         "click .expand": function(event, template) {
             var expandedElements = Session.get("expandedElements");
             expandedElements["e" + this._id._str] = true;
@@ -91,18 +95,18 @@ if (Meteor.isClient) {
 
     Template.svgmap.events({
       "click":function(event, template) {
-        console.log(event.target.attributes.id.value);
-        console.log(event.target.parentElement.attributes.id.value);
-        var region = event.target.parentElement.attributes.id.value;
+          //console.log(event.target.attributes.id.value);
+          //console.log(event.target.parentElement.attributes.id.value);
+          var region = event.target.parentElement.attributes.id.value;
 
-        if (region == "india_region")
-            region = "india";
-        if (region == "middle_east")
-            region = "middle east";
-        if (region == "svg2")
-            region = "world";
+          if (region == "india_region")
+              region = "india";
+          if (region == "middle_east")
+              region = "middle east";
+          if (region == "svg2")
+              region = "world";
 
-        Session.set("activeRegion", region);
+          Session.set("activeRegion", region);
       }
    });    
 }
