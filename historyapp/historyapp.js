@@ -80,33 +80,33 @@ if (Meteor.isClient) {
     });
 
     Template.historyShows.events({
-      "change.fndtn.slider":function(event, template) {
-          sliderCentury = parseInt($('#centurySlider').attr('data-slider'));
-          sliderYear = parseInt($('#yearSlider').attr('data-slider'));
-          activeYear = parseInt((sliderCentury*100) + (sliderYear*1));
-          Session.set("year", sliderYear);
-          Session.set("century", sliderCentury);
-          Session.set("activeYear", activeYear);      
-      },
-      "click .map-menu": function() {
-          Session.set("activeRegion", 'world');
-      }
+        "change.fndtn.slider":function(event, template) {
+            sliderCentury = parseInt($('#centurySlider').attr('data-slider'));
+            sliderYear = parseInt($('#yearSlider').attr('data-slider'));
+            activeYear = parseInt((sliderCentury*100) + (sliderYear*1));
+            Session.set("year", sliderYear);
+            Session.set("century", sliderCentury);
+            Session.set("activeYear", activeYear);      
+        },
+        "click .map-menu": function() {
+            Session.set("activeRegion", 'world');
+        }
    });
 
     Template.svgmap.events({
-      "click":function(event, template) {
-          //console.log(event.target.attributes.id.value);
-          //console.log(event.target.parentElement.attributes.id.value);
-          var region = event.target.parentElement.attributes.id.value;
+        "click":function(event, template) {
+            //console.log(event.target.attributes.id.value);
+            //console.log(event.target.parentElement.attributes.id.value);
+            var region = event.target.parentElement.attributes.id.value;
 
-          if (region == "india_region")
-              region = "india";
-          if (region == "middle_east")
-              region = "middle east";
-          if (region == "svg2")
-              region = "world";
+            if (region == "india_region")
+                region = "india";
+            if (region == "middle_east")
+                region = "middle east";
+            if (region == "svg2")
+                region = "world";
 
-          Session.set("activeRegion", region);
-      }
-   });    
+            Session.set("activeRegion", region);
+        }
+    });    
 }

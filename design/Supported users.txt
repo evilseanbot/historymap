@@ -1,0 +1,43 @@
+Pick 90% of most easily supported users.
+
+Browser support:
+Chrome 
+Firefox 
+IE 10+ 
+
+Screen resolutions: 
+320x568 to 1920x1200
+(94.8%)
+
+Mobile+Tablet OS:
+Android 4.4: 21.72
+Iphone 21.02 (42.74)
+Ipad 17.56 (60.30)
+Android 4.2: 9.4 (69.4%)
+Android 4.1: 6.43 (75.83%)
+Android 5.0: 3.84 (79.67%)
+Android 4.3: 2.98 (82.65%)
+Android 4.0: 1.97% (85.62%)
+"Android": 3.94% (89.56%)
+Android 5.1: 0.44% (90%)
+
+Desktop OS:
+Windows 7 (53.05)
+Windows XP (17.18%) (70.23%)
+Windows 8.1 (10.92%) (81.15%)
+Windows 8 (5.88%) (87.03%)
+Mac OS X 10.9 (3.66%) (90.69%)
+
+=====================
+
+99% of users:
+320x480 to 1920x1200
+
+Chrome
+Firefox
+IE 8+
+Safari
+Opera  
+(98.7)
+
+Screen resolutions:

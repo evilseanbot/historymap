@@ -1,6 +1,6 @@
 head
     title History Map
-    link(rel="icon" type="image/svg+xml" href="https://useiconic.com/open-iconic/svg/globe.svg")
+    link(rel="icon" type="image/png" href="public/globe-4x.png")
 
 body
     .container
@@ -8,22 +8,22 @@ body
 
 template(name='historyShows')
     +navBar
-
-    .row
-        +svgMapTab
-
+    +svgMapTab
 
     each timeUnits
         +timeSlider
 
     .row
-        h2 Year: #{activeYear} &nbsp;&nbsp;&nbsp;&nbsp; Region: #{activeRegion}
+        h2 
+            .columns.small-4.medium-4 Year: #{activeYear} 
+            .columns.small-8.medium-8 Region: #{activeRegion}
+    .row
         ul
             each shows
                 +show
 
 template(name='navBar')
-    nav.top-bar.data-topbar(role="navigation")
+    nav.top-bar(role="navigation" data-topbar)
         ul.title-area(style='background-color: black')
             li.name
                 h1
@@ -34,7 +34,7 @@ template(name='navBar')
         section.top-bar-section
             ul.right
                 li.has-dropdown
-                    a(href="#") Contribute
+                    a#contribute-dropdown(href="#") Contribute
                     ul.dropdown
                         li
                             a(href="https://trello.com/c/fE23ZQiC/20-report-bugs-and-suggest-features") Suggest changes on Trello
@@ -42,13 +42,14 @@ template(name='navBar')
                             a(href="https://github.com/evilseanbot/historymap") Fork on github
 
 template(name='svgMapTab')
-    .columns.small-6.medium-6
-        ul.accordion(data-accordion)
-            li.accordion-navigation
-                a.map-menu(href="#map") Specific Region
-                .content(id="map")        
-                    .map-container 
-                        +svgmap
+    .row
+        .columns.small-6.medium-6
+            ul.accordion(data-accordion)
+                li.accordion-navigation
+                    a.map-menu(href="#map") Specific Region
+                    .content(id="map")        
+                        .map-container 
+                            +svgmap
 
 template(name="timeSlider")
     .row 
@@ -61,16 +62,16 @@ template(name="timeSlider")
                 span.date.activeDate #{year}
     .row
         .columns.small-12.medium-12
-            .range-slider(id='#{title}Slider' 
+            .range-slider.round(id='#{title}Slider' 
                 data-slider 
                 data-options="start: #{start}; end: #{end}; step: 1"
             )
                 span.range-slider-handle(role="slider" tabindex="0") 
                     span.slider-label
                         if isCentury 
-                            #{century}
+                            span #{century}
                         else 
-                            #{year}
+                            span #{year}
                 span.range-slider-active-segment
 
 template(name="show")

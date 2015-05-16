@@ -9,5 +9,6 @@ autopublish
 insecure
 ewall:foundation
 mquandalle:jade
-dburles:google-maps
 stylus
+sanjo:jasmine
+velocity:html-reporter
