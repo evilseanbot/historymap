@@ -1,6 +1,6 @@
 head
     title History Map
-    link(rel="icon" type="image/png" href="public/globe-4x.png")
+    link(rel="icon" type="image/png" href="globe-4x.png")
 
 body
     .container
@@ -8,6 +8,8 @@ body
 
 template(name='historyShows')
     +navBar
+    #suggestModal.reveal-modal(data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog")
+        +suggestModal
     +svgMapTab
 
     each timeUnits
@@ -15,7 +17,7 @@ template(name='historyShows')
 
     .row
         h2 
-            .columns.small-4.medium-4 Year: #{activeYear} 
+            .columns.small-4.medium-4 Year: #{displayActiveYear} 
             .columns.small-8.medium-8 Region: #{activeRegion}
     .row
         ul
@@ -32,14 +34,50 @@ template(name='navBar')
                 a(href="#")
                     span Menu
         section.top-bar-section
-            ul.right
-                li.has-dropdown
-                    a#contribute-dropdown(href="#") Contribute
-                    ul.dropdown
-                        li
-                            a(href="https://trello.com/c/fE23ZQiC/20-report-bugs-and-suggest-features") Suggest changes on Trello
-                        li
-                            a(href="https://github.com/evilseanbot/historymap") Fork on github
+            ul.left
+                +navBarContribute
+
+template(name='navBarContribute')
+    li.has-dropdown
+        a#contribute-dropdown(href="#") Contribute
+        ul.dropdown
+            li
+                a(href="https://trello.com/c/fE23ZQiC/20-report-bugs-and-suggest-features") Suggest changes on Trello
+            li
+                a(href="#" data-reveal-id="suggestModal") Suggest historical media
+            li
+                a(href="https://github.com/evilseanbot/historymap") Github
+
+template(name='suggestModal')
+    h2#modalTitle Suggest historical media
+    .row 
+        .columns.small-4 Name of historical media
+        .columns.small-4 
+            input#suggestedName
+        .columns.small-4
+    .row        
+        .columns.small-4 Type of media
+        .columns.small-4 
+            select#suggestedType
+                option(value="video") Video
+                option(value="game") Game
+                option(value="book") Book
+                option(value="podcast") Podcast
+        .columns.small-4                    
+    .row
+        .columns.small-4 Approximate start year of focus
+        .columns.small-4 
+            input#suggestedStartYear
+        .columns.small-4                    
+    .row
+        .columns.small-4 Approximate end year of focus
+        .columns.small-4 
+            input#suggestedEndYear
+        .columns.small-4                    
+    .row
+        span.button#submitSuggestion Submit
+    
+    a.close-reveal-modal(aria-label="Close") X
 
 template(name='svgMapTab')
     .row
@@ -56,10 +94,12 @@ template(name="timeSlider")
         div #{title}
             if isCentury
                 span.date.activeDate #{century}
-                span.date #{year}
+                span.date #{year} 
+                span.date.activeDate #{calendarEra} 
             else
                 span.date #{century}
-                span.date.activeDate #{year}
+                span.date.activeDate #{year} 
+                span.date #{calendarEra} 
     .row
         .columns.small-12.medium-12
             .range-slider.round(id='#{title}Slider' 
@@ -77,10 +117,9 @@ template(name="timeSlider")
 template(name="show")
     li #{title}
         div
-            span.subtext (#{startYear}~#{endYear}) #{difference}
+            span.subtext (#{displayStartYear}~#{displayEndYear})
             each regions
                 span.subtext.region-label #{this}
-    
     +youtube        
     hr
 

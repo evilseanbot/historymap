@@ -400,6 +400,156 @@ db.show.insert(
 
 db.show.insert(
 {
+    title: "Crash Course: World History: Chapter 40: Decolonization and Nationalism Triumphant",
+    startYear: 1763,
+    endYear: 1979, 
+    regions: ["world"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/T_sGTspaF4Y"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Chapter 41: Globalization I: Good or Bad?",
+    startYear: 1950,
+    endYear: 2015, 
+    regions: ["world"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/5SnR-e0S6Ic"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Chapter 42: Globalization II: Good or Bad?",
+    startYear: 1950,
+    endYear: 2015, 
+    regions: ["world"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/s_iwrt7D5OA"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 1: The Black Legend, Native Americans, and Spaniards",
+    startYear: -15000,
+    endYear: 1680, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/6E9WU9TGrec"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 2: When is Thanksgiving?",
+    startYear: 1607,
+    endYear: 1636, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/o69TvQqyGdg"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 3: The Natives and the English",
+    startYear: 1607,
+    endYear: 1678, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/TTYOQ05oDOI"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 4: The Quakers, the Dutch, and the Ladies",
+    startYear: 1622,
+    endYear: 1691, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/p47tZLJbdag"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 5: The Seven Years War and the Great Awakening",
+    startYear: 1754,
+    endYear: 1763, 
+    regions: ["america", "europe", "india"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/5vKGU3aEGss"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 6: Taxes & Smuggling - Prelude to Revolution",
+    startYear: 1763,
+    endYear: 1776, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/Eytc9ZaNWyc"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 7: Who Won the American Revolution?",
+    startYear: 1776,
+    endYear: 1810, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/3EiSymRrKI4"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 8: The Constitution, the Articles, and Federalism",
+    startYear: 1778,
+    endYear: 1788, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/bO7FQsCcbD8"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 9: Where US Politics Came From",
+    startYear: 1789,
+    endYear: 1801, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/r161cLYzuDI"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 10: Thomas Jefferson & His Democracy",
+    startYear: 1801,
+    endYear: 1809, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/_3Ox6vGteek"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 27: The Progressive Era",
+    startYear: 1890,
+    endYear: 1920, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/i0Q4zPR4G7M"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 47: Obamanation",
+    startYear: 2008,
+    endYear: 2015, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/lUfh2ebjLOg"
+});
+
+db.show.insert(
+{
 	title: "Crash Course: Big History: Chapters 7: Migrations and Intensification",
 	startYear: -159000,
 	endYear: 1490,

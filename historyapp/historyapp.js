@@ -1,13 +1,15 @@
 Shows = new Mongo.Collection("show");
+Suggestions = new Mongo.Collection("suggestion");
 
 if (Meteor.isClient) {
 
     Session.set("expandedElements", {});
     Session.set("activeRegion", "world");
+    Meteor.subscribe("show");
 
     Template.historyShows.helpers({
-        activeYear: function() {
-            return Session.get("activeYear");
+        displayActiveYear: function() {
+            return displayDate(Session.get('activeYear'));
         },
         timeUnits: function() {
             return [
@@ -44,7 +46,7 @@ if (Meteor.isClient) {
 
     Template.timeSlider.helpers({
         century: function() {
-            return parseInt(Session.get("activeYear")/100);
+            return Math.abs(parseInt(Session.get("activeYear")/100));
         },
         year: function() {
             var year = Math.abs(Session.get("activeYear") % 100);
@@ -55,7 +57,15 @@ if (Meteor.isClient) {
         },
         isCentury: function() {
             return this.title == 'century';
+        },
+        calendarEra: function() {
+            var year = Session.get("activeYear");
+            if (year < 0)
+                return "BCE";
+            else
+                return "CE";
         }
+
     });
 
     Template.youtube.helpers({
@@ -95,7 +105,7 @@ if (Meteor.isClient) {
 
     Template.svgmap.events({
         "click":function(event, template) {
-            //console.log(event.target.attributes.id.value);
+            console.log(event.target.attributes.id.value);
             //console.log(event.target.parentElement.attributes.id.value);
             var region = event.target.parentElement.attributes.id.value;
 
@@ -108,5 +118,46 @@ if (Meteor.isClient) {
 
             Session.set("activeRegion", region);
         }
-    });    
+    });  
+
+    Template.suggestModal.events({
+        "click #submitSuggestion":function(event, template) {
+            suggestedName = $("#suggestedName").val();
+            suggestedType = $("#suggestedType").val();
+            suggestedStartYear = $("#suggestedStartYear").val();
+            suggestedEndYear = $("#suggestedEndYear").val();
+   
+            Meteor.call("addSuggestion", {name: suggestedName, type: suggestedType, startYear: suggestedStartYear, endYear: suggestedEndYear})
+            $('#modalTitle').foundation('reveal', 'close');            
+        }
+    });
+
+    Template.show.helpers({
+        displayStartYear: function() {
+            return displayDate(this.startYear);
+        },
+        displayEndYear: function(year) {
+            return displayDate(this.endYear);
+        }
+    });
 }
+
+if (Meteor.isServer) {
+  Meteor.publish("show", function () {
+    return Shows.find();
+  });
+}
+
+var displayDate = function (date) {
+    var displayDate = String(Math.abs(parseInt(date)));
+    if (date < 0)
+        return displayDate + " BCE";
+    else
+        return displayDate + " CE";
+}
+
+Meteor.methods({
+  addSuggestion: function (data) {
+      Suggestions.insert({name: data.name, type: data.type, startYear: data.startYear, endYear: data.endYear});
+  }
+});
