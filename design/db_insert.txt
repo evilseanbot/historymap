@@ -430,6 +430,136 @@ db.show.insert(
 
 db.show.insert(
 {
+    title: "Crash Course: World History: Season 2: Chapter 1: Rethinking Civilization",
+    startYear: -12000,
+    endYear: 1492, 
+    regions: ["world"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/wyzi9GNZFMU"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 2: Money & Debt",
+    startYear: -600,
+    endYear: 500, 
+    regions: ["world"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/94BtOtGVqLw"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 3: Disease",
+    startYear: -100000,
+    endYear: 1600, 
+    regions: ["world"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/1PLBmUVYYeg"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 4: War & Human Nature",
+    startYear: -100000,
+    endYear: -4000, 
+    regions: ["world"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/2NIgqS47m5"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 5: War and Civilization",
+    startYear: -4000,
+    endYear: 2015, 
+    regions: ["world"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/jdVLAG_ptQM"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 6: Climate Change, Chaos, and the Little Ice Age",
+    startYear: 1200,
+    endYear: 1900, 
+    regions: ["world"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/YF8AAJSTJoM"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 7: Humans and Energy",
+    startYear: -12000,
+    endYear: 2015, 
+    regions: ["world"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/EM1IyIyr-Zc"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 8: Drought and Famine",
+    startYear: -441,
+    endYear: 1900, 
+    regions: ["world"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/Sgae8SA-rcI"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 9: How World War I Started",
+    startYear: 1914,
+    endYear: 1914, 
+    regions: ["europe"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/Cd2ch4XV84s"
+});
+
+db.show.insert(
+{
+    title: "Extra History: Zulu Empire: Chapter 1",
+    startYear: 1787,
+    endYear: 1818, 
+    regions: ["africa"],
+    type: "youtube",
+    src: ""
+});
+
+db.show.insert(
+{
+    title: "Extra History: Zulu Empire: Chapter 2",
+    startYear: 1818,
+    endYear: 1840, 
+    regions: ["africa"],
+    type: "youtube",
+    src: ""
+});
+
+db.show.insert(
+{
+    title: "Extra History: Zulu Empire: Chapter 3",
+    startYear: 1840,
+    endYear: 1879, 
+    regions: ["africa"],
+    type: "youtube",
+    src: ""
+});
+
+db.show.insert(
+{
+    title: "Extra History: Zulu Empire: Chapter 4",
+    startYear: 1879,
+    endYear: 1887, 
+    regions: ["africa"],
+    type: "youtube",
+    src: ""
+});
+
+db.show.insert(
+{
     title: "Crash Course: US History: Chapter 1: The Black Legend, Native Americans, and Spaniards",
     startYear: -15000,
     endYear: 1680, 
@@ -528,14 +658,181 @@ db.show.insert(
     src: "https://www.youtube.com/embed/_3Ox6vGteek"
 });
 
-db.show.insert(
-{
+db.show.insert({
     title: "Crash Course: US History: Chapter 27: The Progressive Era",
     startYear: 1890,
     endYear: 1920, 
     regions: ["america"],
     type: "youtube",
     src: "https://www.youtube.com/embed/i0Q4zPR4G7M"
+});
+
+db.show.insert({
+    title: "Crash Course: US History: Chapter 30: America in World War I",
+    startYear: 1914,
+    endYear: 1918, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/y59wErqg4X"
+});
+
+db.show.insert({
+    title: "Crash Course: US History: Chapter 31: Women's Suffrage",
+    startYear: 1900,
+    endYear: 1920, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/HGEMscZE5dY"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 32: Roaring 20's",
+    startYear: 1920,
+    endYear: 1925, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/VfOR1XCMf7A"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 33: The great depression",
+    startYear: 1925,
+    endYear: 1932, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/GCQfMWAikyU"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 34: The new Deal",
+    startYear: 1933,
+    endYear: 1938, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/6bMq9Ek6jnA"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 35: World War II Part 1",
+    startYear: 1939,
+    endYear: 1945, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/Objoad6rG6U"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 36: World War II Part 2: The Homefront",
+    startYear: 1941,
+    endYear: 1945, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/HofnGQwPgqs"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 37: The Cold War",
+    startYear: 1945,
+    endYear: 1953, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/9C72ISMF_D0"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 38: The Cold War In Asia",
+    startYear: 1950,
+    endYear: 1975, 
+    regions: ["america", "asia"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/Y2IcmLkuhG0"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 39: Civil Rights and the 1950s",
+    startYear: 1950,
+    endYear: 1960, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/S64zRnnn4Po19"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 40: The 1960s in America",
+    startYear: 1960,
+    endYear: 1970, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/lkXFb1sMa38"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 41: The Rise of Conservatism",
+    startYear: 1964,
+    endYear: 1974, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/OCrxD19DHA8"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 42: Ford, Carter, and the Economic Malaise",
+    startYear: 1971,
+    endYear: 1980, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/pyN5LPHEQ_0"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 43: The Reagan Revolution",
+    startYear: 1980,
+    endYear: 1988, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/h4DkpFP_aw"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 44: George HW Bush and the End of the Cold War",
+    startYear: 1987,
+    endYear: 1992, 
+    regions: ["america", "middle east"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/L-K19rVDxoM"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 45: The Clinton Years, or the 1990s",
+    startYear: 1992,
+    endYear: 2000, 
+    regions: ["america", "middle east"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/-rboN6F2g-k"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 46: Terrorism, War, and Bush 43",
+    startYear: 2000,
+    endYear: 2008, 
+    regions: ["america", "middle east"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/nlsnnhn3VWE"
 });
 
 db.show.insert(

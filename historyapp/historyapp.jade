@@ -19,6 +19,14 @@ template(name='historyShows')
         h2 
             .columns.small-4.medium-4 Year: #{displayActiveYear} 
             .columns.small-8.medium-8 Region: #{activeRegion}
+
+    .row
+        div(data-magellan-expedition="fixed" style='margin: 0px')
+            .progress.small-12(style='max-width: 1000px; margin: auto')
+                .row
+                    .columns.small-4.text-left #{displayHalfCenturyBeforeActiveYear}
+                    .columns.small-4.text-center #{displayActiveYear}
+                    .columns.small-4.text-right #{displayHalfCenturyAfterActiveYear}
     .row
         ul
             each shows
@@ -120,6 +128,8 @@ template(name="show")
             span.subtext (#{displayStartYear}~#{displayEndYear})
             each regions
                 span.subtext.region-label #{this}
+        div.progress.small-12
+            span.meter(style="width: #{lengthOfBar}%; left: #{startOfBar}%; position: relative")
     +youtube        
     hr
 

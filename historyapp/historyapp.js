@@ -11,6 +11,12 @@ if (Meteor.isClient) {
         displayActiveYear: function() {
             return displayDate(Session.get('activeYear'));
         },
+        displayHalfCenturyBeforeActiveYear: function() {
+            return displayDate(Session.get('activeYear')-50);
+        }, 
+        displayHalfCenturyAfterActiveYear: function() {
+            return displayDate(Session.get('activeYear')+50);
+        },               
         timeUnits: function() {
             return [
                 {title: "century", start: "-40", end: "59"},
@@ -24,19 +30,21 @@ if (Meteor.isClient) {
             if (activeRegion == "world") {
 
                 var shows = Shows.find({
-                    startYear: {$lte: activeYear}, 
-                    endYear: {$gte: activeYear}
+                    startYear: {$lte: activeYear+50}, 
+                    endYear: {$gte: activeYear-50}
                 }).fetch();
             }
             else {
                 var shows = Shows.find({
-                    startYear: {$lte: activeYear}, 
-                    endYear: {$gte: activeYear},
+                    startYear: {$lte: activeYear+50}, 
+                    endYear: {$gte: activeYear-50},
                     regions: {$in: [activeRegion, 'world']}
                 }).fetch();
             }
 
-            var sortedShows = _.sortBy(shows, function(show){return show.endYear - show.startYear});
+            var sortedShows = _.sortBy(shows, function(show){
+                return (show.endYear - show.startYear) + (timeDistance(show.startYear, show.endYear, activeYear)*2); 
+            });
             return sortedShows;
         },
         activeRegion: function() {
@@ -138,6 +146,18 @@ if (Meteor.isClient) {
         },
         displayEndYear: function(year) {
             return displayDate(this.endYear);
+        },
+        lengthOfBar: function() {
+            startOfBar = Session.get("activeYear") - 50;
+            startPoint = Math.max(startOfBar, this.startYear)
+            endOfBar = Session.get("activeYear") + 50;
+            endPoint = Math.min(endOfBar, this.endYear+1)
+            return endPoint - startPoint;
+        },
+        startOfBar: function() {
+            actualStartOfBar = 50 + this.startYear - Session.get("activeYear");
+            displayStartOfBar = Math.max(actualStartOfBar, 0);
+            return displayStartOfBar;
         }
     });
 }
@@ -154,6 +174,18 @@ var displayDate = function (date) {
         return displayDate + " BCE";
     else
         return displayDate + " CE";
+}
+
+var timeDistance = function(startYear, endYear, activeYear) {
+    if (startYear <= activeYear) {
+        if (endYear >= activeYear) {
+            return 0;
+        } else {
+            return activeYear - endYear;
+        }
+    } else {
+        return startYear - activeYear;
+    }
 }
 
 Meteor.methods({
