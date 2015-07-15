@@ -26,24 +26,10 @@ if (Meteor.isClient) {
         shows: function() {
             var activeYear = parseInt(Session.get("activeYear"));
             var activeRegion = Session.get("activeRegion");
-            
-            if (activeRegion == "world") {
 
-                var shows = Shows.find({
-                    startYear: {$lte: activeYear+50}, 
-                    endYear: {$gte: activeYear-50}
-                }).fetch();
-            }
-            else {
-                var shows = Shows.find({
-                    startYear: {$lte: activeYear+50}, 
-                    endYear: {$gte: activeYear-50},
-                    regions: {$in: [activeRegion, 'world']}
-                }).fetch();
-            }
-
-            var sortedShows = _.sortBy(shows, function(show){
-                return (show.endYear - show.startYear) + (timeDistance(show.startYear, show.endYear, activeYear)*2); 
+            var unsortedShows = getUnsortedShows(activeYear, activeRegion);
+            var sortedShows = _.sortBy(unsortedShows, function(show){
+                return (show.endYear - show.startYear) + (timeDistance(show.startYear, show.endYear, activeYear)*10); 
             });
             return sortedShows;
         },
@@ -114,7 +100,6 @@ if (Meteor.isClient) {
     Template.svgmap.events({
         "click":function(event, template) {
             console.log(event.target.attributes.id.value);
-            //console.log(event.target.parentElement.attributes.id.value);
             var region = event.target.parentElement.attributes.id.value;
 
             if (region == "india_region")
@@ -163,9 +148,9 @@ if (Meteor.isClient) {
 }
 
 if (Meteor.isServer) {
-  Meteor.publish("show", function () {
-    return Shows.find();
-  });
+    Meteor.publish("show", function () {
+      return Shows.find();
+    });
 }
 
 var displayDate = function (date) {
@@ -188,8 +173,24 @@ var timeDistance = function(startYear, endYear, activeYear) {
     }
 }
 
+var getUnsortedShows = function(activeYear, activeRegion) {
+    if (activeRegion == "world") {
+        return Shows.find({
+            startYear: {$lte: activeYear+50}, 
+            endYear: {$gte: activeYear-50}
+        }).fetch();
+    }
+    else {
+        return Shows.find({
+            startYear: {$lte: activeYear+50}, 
+            endYear: {$gte: activeYear-50},
+            regions: {$in: [activeRegion, 'world']}
+        }).fetch();
+    }    
+}
+
 Meteor.methods({
-  addSuggestion: function (data) {
-      Suggestions.insert({name: data.name, type: data.type, startYear: data.startYear, endYear: data.endYear});
-  }
+    addSuggestion: function (data) {
+        Suggestions.insert({name: data.name, type: data.type, startYear: data.startYear, endYear: data.endYear});
+    }
 });
