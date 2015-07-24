@@ -24,6 +24,11 @@ if (Meteor.isClient) {
             ]
         }, 
         shows: function() {
+
+            if (!isDbReady()) {
+                return defaultShows();
+            }
+
             var activeYear = parseInt(Session.get("activeYear"));
             var activeRegion = Session.get("activeRegion");
 
@@ -115,12 +120,12 @@ if (Meteor.isClient) {
 
     Template.suggestModal.events({
         "click #submitSuggestion":function(event, template) {
-            suggestedName = $("#suggestedName").val();
-            suggestedType = $("#suggestedType").val();
-            suggestedStartYear = $("#suggestedStartYear").val();
-            suggestedEndYear = $("#suggestedEndYear").val();
-   
-            Meteor.call("addSuggestion", {name: suggestedName, type: suggestedType, startYear: suggestedStartYear, endYear: suggestedEndYear})
+            Meteor.call("addSuggestion", {
+                name: $("#suggestedName").val(), 
+                type: $("#suggestedType").val(), 
+                startYear: $("#suggestedStartYear").val(), 
+                endYear: $("#suggestedEndYear").val()
+            })
             $('#modalTitle').foundation('reveal', 'close');            
         }
     });
@@ -189,8 +194,13 @@ var getUnsortedShows = function(activeYear, activeRegion) {
     }    
 }
 
+var isDbReady = function() {
+    return (Shows.find({}).fetch().length > 0);
+}
+
 Meteor.methods({
     addSuggestion: function (data) {
         Suggestions.insert({name: data.name, type: data.type, startYear: data.startYear, endYear: data.endYear});
     }
 });
+

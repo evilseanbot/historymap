@@ -658,6 +658,166 @@ db.show.insert(
     src: "https://www.youtube.com/embed/_3Ox6vGteek"
 });
 
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 11: The War of 1812",
+    startYear: 1808,
+    endYear: 1814, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/qMXqg2PKJZU"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 12: The Market Revolution",
+    startYear: 1812,
+    endYear: 1853, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/RNftCCwAol0"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 13: Slavery",
+    startYear: 1619,
+    endYear: 1865, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/Ajn9g5Gsv98"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 14: Age of Jackson",
+    startYear: 1816,
+    endYear: 1843, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/beN4qE-e5O8"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 15: 19th Century Reforms",
+    startYear: 1837,
+    endYear: 1852, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/t62fUZJvjOs"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 16: Women in the 19th Century",
+    startYear: 1850,
+    endYear: 1923, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/fM1czS_VYDI"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 17: War & Expansion",
+    startYear: 1821,
+    endYear: 1860, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/tkdF8pOFUfI"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 18: The Election of 1860 & the Road to Disunion",
+    startYear: 1850,
+    endYear: 1861, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/roNmeOOJCDY"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 19: Battles of the Civil War",
+    startYear: 1861,
+    endYear: 1865, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/25HHVDOaGeE"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 20: History of the 4th of July",
+    startYear: 1776,
+    endYear: 1938, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/iIoYdC1Gkq8"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 21: The Civil War Part 2",
+    startYear: 1863,
+    endYear: 1865, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/GzTrKccmj_I"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 22: Reconstruction and 1876",
+    startYear: 1865,
+    endYear: 1877, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/nowsS7pMApI"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 23: The Industrial Economy",
+    startYear: 1861,
+    endYear: 1884, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/r6tRp-zRUJs"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 24: Westward Expansion",
+    startYear: 1803,
+    endYear: 1900, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/Q16OZkgSXfM"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 25: Growth, Cities, and Immigration",
+    startYear: 1850,
+    endYear: 1904, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/RRhjqqe750A"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: US History: Chapter 26: Gilded Age Politics",
+    startYear: 1873,
+    endYear: 1896, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/Spgdy3HkcSs"
+});
+
 db.show.insert({
     title: "Crash Course: US History: Chapter 27: The Progressive Era",
     startYear: 1890,
@@ -665,6 +825,24 @@ db.show.insert({
     regions: ["america"],
     type: "youtube",
     src: "https://www.youtube.com/embed/i0Q4zPR4G7M"
+});
+
+db.show.insert({
+    title: "Crash Course: US History: Chapter 28: American Imperialism",
+    startYear: 1890,
+    endYear: 1922, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/QfsfoFqsFk4"
+});
+
+db.show.insert({
+    title: "Crash Course: US History: Chapter 29: Progressive Presidents",
+    startYear: 1901,
+    endYear: 1921, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/F7flSW1PGsA"
 });
 
 db.show.insert({

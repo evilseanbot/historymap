@@ -111,6 +111,20 @@ World History Season 2
 11 - 1235bce-1120bce The End of Civilization (In the Bronze Age) ErOitC7OyHk africa, middle east
 12 - ?-? The Rise of the West and Historical Methodology nosJVTuCHFk - europe
 13 - 1860-1945 Asian Responses to Imperialism - nxmWfbXS4Pw middle east asia india
+14 - 1804-? The Railroad Journey and the Industrial Revolution GYAk5jCTQ3s america europe uk
+15 - 1760-1820 Population, Sustainability, and Malthus QAkW_i0bDpQ uk asia
+16 - 632-750 Islam and Politics ka8csjsmX6I middle east africa
+17 - 1526-1757 The Mughal Empire and Historical Reputation nbuM0aJjVgE india
+18 - 1501-1525 Luther and the Protestant Reformation 1o8oIELbNxE europe
+19 - 800-1556 Charles V and the Holy Roman Empire MRYzW3BSj0I europe america
+20 - 1939-1945 World War II, A War for Resources H-2q-QMUIgY europe asia uk
+21 - 1884-2015 Congo and Africa's World War 4uArRzwKHvE africa
+22 - 802-1400 - Water and Classical Civilizations rP54LFFSZ1Q america asia
+23 - 1875-1938 Conflict in Israel and Palestine 1wo2TLlMhiw middle_east europe
+24 - 750-1100 The Vikings! Wc5zUK2MKNY europe uk america
+25 - 1824-2015 War and Nation Building in Latin America v6xi8_7Fy6Y america
+26 - 1501-1989 Iran's Revolutions 8w4Ku6l7OEI middle_east
+27 - 782-1162 Japan in the Heian Period and Cultural History ZnZEoOJ-cxE asia
 
 US History:
 11 - 1808-1814 The War of 1812 qMXqg2PKJZU america
@@ -127,4 +141,8 @@ US History:
 22 - 1865-1877 Reconstruction and 1876 nowsS7pMApI
 23 - 1861-1884 The Industrial Economy r6tRp-zRUJs
 24 - 1803-1900 Westward Expansion Q16OZkgSXfM
-
+25 - 1850-1904 Growth, Cities, and Immigration RRhjqqe750A
+26 - 1873-1896 Gilded Age Politics Spgdy3HkcSs
+27 - 1890-1920 The Progressive Era i0Q4zPR4G7M
+28 - 1890-1922 American Imperialism QfsfoFqsFk4
+29 - 1901-1921 Progressive Presidents F7flSW1PGsA 

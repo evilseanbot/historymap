@@ -21,7 +21,7 @@ template(name='historyShows')
             .columns.small-8.medium-8 Region: #{activeRegion}
 
     .row
-        div(data-magellan-expedition="fixed" style='margin: 0px')
+        div#magellan(data-magellan-expedition="fixed" style='margin: 0px')
             .progress.small-12(style='max-width: 1000px; margin: auto')
                 .row
                     .columns.small-4.text-left #{displayHalfCenturyBeforeActiveYear}
@@ -92,7 +92,7 @@ template(name='svgMapTab')
         .columns.small-6.medium-6
             ul.accordion(data-accordion)
                 li.accordion-navigation
-                    a.map-menu(href="#map") Specific Region
+                    a.map-menu#mapTarget(href="#map") Specific Region
                     .content(id="map")        
                         .map-container 
                             +svgmap
