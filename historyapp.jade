@@ -1,0 +1,145 @@
+head
+    title History Map
+    link(rel="icon" type="image/png" href="globe-4x.png")
+
+body
+    .container
+        +historyShows
+
+template(name='historyShows')
+    +navBar
+    #suggestModal.reveal-modal(data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog")
+        +suggestModal
+    +svgMapTab
+
+    each timeUnits
+        +timeSlider
+
+    .row
+        h2 
+            .columns.small-4.medium-4 Year: #{displayActiveYear} 
+            .columns.small-8.medium-8 Region: #{activeRegion}
+
+    .row
+        div#magellan(data-magellan-expedition="fixed" style='margin: 0px')
+            .progress.small-12(style='max-width: 1000px; margin: auto')
+                .row
+                    .columns.small-4.text-left #{displayHalfCenturyBeforeActiveYear}
+                    .columns.small-4.text-center #{displayActiveYear}
+                    .columns.small-4.text-right #{displayHalfCenturyAfterActiveYear}
+    .row
+        ul
+            each shows
+                +show
+
+template(name='navBar')
+    nav.top-bar(role="navigation" data-topbar)
+        ul.title-area(style='background-color: black')
+            li.name
+                h1
+                    a(href="#") History Map
+            li.toggle-topbar.menu-icon
+                a(href="#")
+                    span Menu
+        section.top-bar-section
+            ul.left
+                +navBarContribute
+
+template(name='navBarContribute')
+    li.has-dropdown
+        a#contribute-dropdown(href="#") Contribute
+        ul.dropdown
+            li
+                a(href="https://trello.com/c/fE23ZQiC/20-report-bugs-and-suggest-features") Suggest changes on Trello
+            li
+                a(href="#" data-reveal-id="suggestModal") Suggest historical media
+            li
+                a(href="https://github.com/evilseanbot/historymap") Github
+
+template(name='suggestModal')
+    h2#modalTitle Suggest historical media
+    .row 
+        .columns.small-4 Name of historical media
+        .columns.small-4 
+            input#suggestedName
+        .columns.small-4
+    .row        
+        .columns.small-4 Type of media
+        .columns.small-4 
+            select#suggestedType
+                option(value="video") Video
+                option(value="game") Game
+                option(value="book") Book
+                option(value="podcast") Podcast
+        .columns.small-4                    
+    .row
+        .columns.small-4 Approximate start year of focus
+        .columns.small-4 
+            input#suggestedStartYear
+        .columns.small-4                    
+    .row
+        .columns.small-4 Approximate end year of focus
+        .columns.small-4 
+            input#suggestedEndYear
+        .columns.small-4                    
+    .row
+        span.button#submitSuggestion Submit
+    
+    a.close-reveal-modal(aria-label="Close") X
+
+template(name='svgMapTab')
+    .row
+        .columns.small-6.medium-6
+            ul.accordion(data-accordion)
+                li.accordion-navigation
+                    a.map-menu#mapTarget(href="#map") Specific Region
+                    .content(id="map")        
+                        .map-container 
+                            +svgmap
+
+template(name="timeSlider")
+    .row 
+        div #{title}
+            if isCentury
+                span.date.activeDate #{century}
+                span.date #{year} 
+                span.date.activeDate #{calendarEra} 
+            else
+                span.date #{century}
+                span.date.activeDate #{year} 
+                span.date #{calendarEra} 
+    .row
+        .columns.small-12.medium-12
+            .range-slider.round(id='#{title}Slider' 
+                data-slider 
+                data-options="start: #{start}; end: #{end}; step: 1"
+            )
+                span.range-slider-handle(role="slider" tabindex="0") 
+                    span.slider-label
+                        if isCentury 
+                            span #{century}
+                        else 
+                            span #{year}
+                span.range-slider-active-segment
+
+template(name="show")
+    li #{title}
+        div
+            span.subtext (#{displayStartYear}~#{displayEndYear})
+            each regions
+                span.subtext.region-label #{this}
+        div.progress.small-12
+            span.meter(style="width: #{lengthOfBar}%; left: #{startOfBar}%; position: relative")
+    +youtube        
+    hr
+
+template(name="youtube")
+    if isYoutube
+         if src
+            a.expand Watch
+            if expanded
+                .video
+                    iframe#ytplayer(type="text/html" width="640" height="390"
+                        src="#{src}"
+                        frameborder="0"
+                    )
