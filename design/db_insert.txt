@@ -520,6 +520,216 @@ db.show.insert(
 
 db.show.insert(
 {
+    title: "Crash Course: World History: Season 2: Chapter 10: Who Started World War I",
+    startYear: 1914,
+    endYear: 1914, 
+    regions: ["europe"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/_pFCpKtwCkI"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 11: The End of Civilization (In the Bronze Age)",
+    startYear: -1235,
+    endYear: -1120, 
+    regions: ["africa", "middle_east"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/ErOitC7OyHk"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 12: The Rise of the West and Historical Methodology",
+    startYear: 1500,
+    endYear: 2015, 
+    regions: ["europe", "america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/nosJVTuCHFk"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 13: Asian Responses to Imperialism",
+    startYear: 1860,
+    endYear: 1945, 
+    regions: ["middle_east",  "asia", "india"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/Cd2ch4XV84s"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 14: The Railroad Journey and the Industrial Revolution",
+    startYear: 1804,
+    endYear: 1840, 
+    regions: ["europe", "america", "uk"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/GYAk5jCTQ3s"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 15: Population, Sustainability, and Malthus",
+    startYear: 1760,
+    endYear: 1820, 
+    regions: ["uk", "asia"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/QAkW_i0bDpQ"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 16: Islam and Politics",
+    startYear: 632,
+    endYear: 750, 
+    regions: ["middle_east", "africa"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/ka8csjsmX6I"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 17: The Mughal Empire and Historical Reputation",
+    startYear: 1526,
+    endYear: 1757, 
+    regions: ["india"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/nbuM0aJjVgE"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 18: Luther and the Protestant Reformation",
+    startYear: 1501,
+    endYear: 1525, 
+    regions: ["europe"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/1o8oIELbNxE"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 19: Charles V and the Holy Roman Empire",
+    startYear: 800,
+    endYear: 1556, 
+    regions: ["europe", "america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/MRYzW3BSj0I"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 20: World War II, A War for Resources",
+    startYear: 1939,
+    endYear: 1945, 
+    regions: ["europe", "asia", "uk"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/H-2q-QMUIgY"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 21: Congo and Africa's World War",
+    startYear: 1884,
+    endYear: 2015, 
+    regions: ["africa],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/4uArRzwKHvE"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 22: Water and Classical Civilizations",
+    startYear: 802,
+    endYear: 1400, 
+    regions: ["america", "asia"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/rP54LFFSZ1Q"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 23: Conflict in Israel and Palestine",
+    startYear: 1875,
+    endYear: 1935, 
+    regions: ["europe", "middle_east"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/1wo2TLlMhiw"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 24: The Vikings!",
+    startYear: 750,
+    endYear: 1100, 
+    regions: ["europe", "america", "uk"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/Wc5zUK2MKNY"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 25: War and Nation Building in Latin America",
+    startYear: 1824,
+    endYear: 2015, 
+    regions: ["america"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/v6xi8_7Fy6Y"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 26: Iran's Revolutions",
+    startYear: 1501,
+    endYear: 1989, 
+    regions: ["middle_east"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/8w4Ku6l7OEI"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 27: Japan in the Heian Period and Cultural History",
+    startYear: 782,
+    endYear: 1162, 
+    regions: ["asia"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/ZnZEoOJ-cxE"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 28: Nonviolence and Peace Movements",
+    startYear: 1894,
+    endYear: 1969, 
+    regions: ["europe", "america", "india"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/eP-mv5IjFzYb"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 29: Capitalism and the Dutch East India Company",
+    startYear: 1595,
+    endYear: 1799, 
+    regions: ["europe", "uk", "india"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/zPIhMJGWiM8"
+});
+
+db.show.insert(
+{
+    title: "Crash Course: World History: Season 2: Chapter 30: Democracy, Authoritarian Capitalism, and China",
+    startYear: 1947,
+    endYear: 2035, 
+    regions: ["asia", "america", "india"],
+    type: "youtube",
+    src: "https://www.youtube.com/embed/k7dTDjRnBqU"
+});
+
+db.show.insert(
+{
     title: "Extra History: Zulu Empire: Chapter 1",
     startYear: 1787,
     endYear: 1818, 
